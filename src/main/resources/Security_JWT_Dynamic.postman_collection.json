@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "e2736772-e24a-44ba-bbb4-c99efdc5275f",
+		"name": "Security_JWT_Dynamic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\":\"shail@mail.com\",\r\n\t\"password\":\"shail@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6InNoYWlsQG1haWwuY29tIiwicm9sZXMiOiJST0xFX0FETUlOIiwic2NvcGUiOiJSRUZSRVNIX1RPS0VOIiwianRpIjoiZmZhNzZiYTItZjQzMS00YTU5LWJmNGEtNGJiNDE3MzU2Y2E0IiwiaXNzIjoiYmxvZy5zaGFpbGVuZHJhLmRldiIsImlhdCI6MTY0MzIxNDAyNywiZXhwIjoxODU5MjE0MDI3fQ.5OtME8B9GjfPJRSy5KlcOZxrBwzuxtBLOvgA446yw4GS2IlNfMXW8CPgWBTasmgVb5vGvd7xqiYen22yJYCADA\",\r\n    \"refreshKid\":7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/refreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"refreshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AnyMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6InNoYWlsQG1haWwuY29tIiwicm9sZXMiOiJST0xFX0FETUlOIiwic2NvcGUiOiJBQ0NFU1NfVE9LRU4iLCJqdGkiOiI0MmFlZjExYy04NDU0LTQ2MDgtOThkYi00YzUxMjUyN2VjMGYiLCJpc3MiOiJibG9nLnNoYWlsZW5kcmEuZGV2IiwiaWF0IjoxNjQzMjE0NTQ1LCJleHAiOjE2NzkyMTQ1NDV9.UEefTzfAw9CPojLPnRZM1lhzqyqZ0ScHKAJgXf5XEafNL2yDmME9QEOMDaHSsjRAX1R1T2bQva3E-SChgMwnQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "kid",
+						"value": "8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8080/any/message",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"any",
+						"message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
