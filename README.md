@@ -1,6 +1,6 @@
 # spring_security
 
-This repository contains the source code for various mechanisms of implementing **Spring Security** in memory, databased based and otther discussed in series of articles @ [Spring Security](https://blog.shailendra.dev/series/spring-security).
+This repository contains the source code for various mechanisms of implementing **Spring Security** in memory, databased based and otther discussed in series of articles @ [Spring Security](https://techsphere.dev/series/spring-security).
 
 ## How to use the repository
 
